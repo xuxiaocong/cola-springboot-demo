@@ -10,16 +10,14 @@
     <name>cola-springboot-demo</name>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.deploy.skip>true</maven.deploy.skip>
 
         <cola.components.version>4.3.2</cola.components.version>
-
-        <spring-boot.version>2.7.2</spring-boot.version>
-        <mybatis-starter.version>2.2.2</mybatis-starter.version>
+        <spring-boot.version>3.2.6</spring-boot.version>
     </properties>
 
     <modules>
@@ -88,33 +86,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-starter.version}</version>
-            </dependency>
 
-            <!--Validation API-->
-            <!--
-                - javax.validation:javax.validation
-                - org.hibernate.validator:hibernate-validator
-                - org.glassfish:jakarta.el
-                are declared in spring-boot-dependencies
-            -->
-            <dependency>
-                <groupId>javax.el</groupId>
-                <artifactId>javax.el-api</artifactId>
-                <version>3.0.0</version>
-            </dependency>
-            <!--Validation API End -->
-
-            <!-- Misc -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>1.2.83</version>
-            </dependency>
-            <!-- Misc End -->
         </dependencies>
     </dependencyManagement>
 
