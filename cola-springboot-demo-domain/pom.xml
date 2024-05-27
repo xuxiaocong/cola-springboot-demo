@@ -13,10 +13,10 @@
     <name>cola-springboot-demo-domain</name>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.xxc</groupId>-->
-<!--            <artifactId>cola-springboot-demo-client</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.xxc</groupId>
+            <artifactId>cola-springboot-demo-client</artifactId>
+        </dependency>
 
         <!-- COLA components -->
         <dependency>
