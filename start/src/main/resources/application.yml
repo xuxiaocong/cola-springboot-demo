@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:example.sqlite
+    driver-class-name: org.sqlite.JDBC
+  sql:
+    init:
+      schema-locations: classpath:mybatis/init.sql
+      mode: always
+mybatis-plus:
+  mapper-locations: classpath:mybatis/*.xml
