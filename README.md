@@ -7,23 +7,25 @@
   - Java: 17
   - COLA: 4.3.2
   - SpringBoot: 3.2.6
-- 适用人群
-    - 已有SpringBoot基础，使用SSM开发过项目
-    - 已读过作者的文章，但文章过于简单，无法完全理解并落地实际项目
-        - [https://blog.csdn.net/significantfrank/article/details/110934799](https://blog.csdn.net/significantfrank/article/details/110934799)
-        - [https://segmentfault.com/a/1190000041645487](https://segmentfault.com/a/1190000041645487)
-
+        
 ## 下载代码
 
 ```shell
+# 下载代码
 git clone https://gitee.com/XuXiaoCong/cola-springboot-demo.git
 
+# 进入目录
 cd cola-springboot-demo
+
+# 下载依赖
+mvn clean package
+
+# 启动，使用Java17
+java -jar start/target/start.jar
 ```
 
-## 待办
+## 参考文档
 
-- 使用用户领域当做示例，做简单的CRUD
-    - 使用mybatis-plus实现数据访问
-    - 为了方便快速运行，使用sqlite作为数据库
-- 结合实践，调整类位置
+- [https://blog.csdn.net/significantfrank/article/details/110934799](https://blog.csdn.net/significantfrank/article/details/110934799)
+- [https://segmentfault.com/a/1190000041645487](https://segmentfault.com/a/1190000041645487)
+
