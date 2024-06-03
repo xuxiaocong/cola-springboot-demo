@@ -12,7 +12,7 @@ public class UserEditCmd {
     @NotBlank(message = "name不能为空")
     private String name;
 
-    @Schema(title = "性别：0.未知；1.男；2.女")
+    @Schema(title = "性别")
     @NotEmpty(message = "sex不能为空")
     private Sex sex;
 
