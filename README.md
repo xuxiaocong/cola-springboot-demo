@@ -5,7 +5,7 @@
   - [https://blog.xuxiaocong.cn/cola-springboot/](https://blog.xuxiaocong.cn/cola-springboot/)
 - 代码版本
   - Java: 17
-  - COLA: 4.3.2
+  - COLA: 5.0.0/4.3.2
   - SpringBoot: 3.2.6
         
 ## 下载代码
