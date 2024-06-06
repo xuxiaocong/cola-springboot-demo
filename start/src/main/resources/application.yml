@@ -8,3 +8,5 @@ spring:
       mode: always
 mybatis-plus:
   mapper-locations: classpath:mybatis/*.xml
+
+tempRootPath: ./tmp
