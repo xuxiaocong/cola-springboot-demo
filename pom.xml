@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.deploy.skip>true</maven.deploy.skip>
 
-        <cola.components.version>4.3.2</cola.components.version>
+        <cola.components.version>5.0.0</cola.components.version>
         <spring-boot.version>3.2.6</spring-boot.version>
         <mybatis-plus-starter.version>3.5.6</mybatis-plus-starter.version>
         <!-- 方便演示，使用sqlite -->
