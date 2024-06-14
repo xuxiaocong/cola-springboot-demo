@@ -3,9 +3,11 @@
 - 演示如何使用COLA+SpringBoot快速搭建单体应用
 - 文档介绍：
   - [https://blog.xuxiaocong.cn/cola-springboot/](https://blog.xuxiaocong.cn/cola-springboot/)
+- BiliBili视频：
+  - [https://www.bilibili.com/video/BV12x4y1b7cu/](https://www.bilibili.com/video/BV12x4y1b7cu/)
 - 代码版本
   - Java: 17
-  - COLA: 5.0.0/4.3.2
+  - COLA: 5.0.0
   - SpringBoot: 3.2.6
         
 ## 下载代码
