@@ -1,16 +1,18 @@
 package com.xxc.demo.user.api;
 
 import com.alibaba.cola.dto.PageResponse;
+import com.alibaba.cola.dto.Response;
+import com.alibaba.cola.dto.SingleResponse;
 import com.xxc.demo.user.dto.*;
 
 public interface UserServiceI {
-    void add(UserAddCmd cmd);
+    Response add(UserAddCmd cmd);
 
-    void edit(Long id, UserEditCmd cmd);
+    Response edit(Long id, UserEditCmd cmd);
 
-    void delete(Long id);
+    Response delete(Long id);
 
     PageResponse<UserPageCO> page(UserPageQry qry);
 
-    UserDetailCO getDetail(Long id);
+    SingleResponse<UserDetailCO> getDetail(Long id);
 }

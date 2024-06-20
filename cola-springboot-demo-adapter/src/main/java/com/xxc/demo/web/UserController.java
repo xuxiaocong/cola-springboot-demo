@@ -23,22 +23,19 @@ public class UserController {
     @Operation(summary = "新增用户")
     @PostMapping("")
     public Response add(@RequestBody UserAddCmd cmd) {
-        userService.add(cmd);
-        return Response.buildSuccess();
+        return userService.add(cmd);
     }
 
     @Operation(summary = "编辑")
     @PatchMapping("/{id}")
     public Response edit(@PathVariable("id") Long id, @RequestBody UserEditCmd cmd) {
-        userService.edit(id, cmd);
-        return Response.buildSuccess();
+        return userService.edit(id, cmd);
     }
 
     @Operation(summary = "删除用户")
     @DeleteMapping("/{id}")
     public Response delete(@PathVariable("id") Long id) {
-        userService.delete(id);
-        return Response.buildSuccess();
+        return userService.delete(id);
     }
 
     @Operation(summary = "分页获取列表")
@@ -50,6 +47,6 @@ public class UserController {
     @Operation(summary = "获取详情")
     @GetMapping("/{id}")
     public SingleResponse<UserDetailCO> getDetail(@PathVariable("id") Long id) {
-        return SingleResponse.of(userService.getDetail(id));
+        return userService.getDetail(id);
     }
 }

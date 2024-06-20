@@ -1,6 +1,8 @@
 package com.xxc.demo.user;
 
 import com.alibaba.cola.dto.PageResponse;
+import com.alibaba.cola.dto.Response;
+import com.alibaba.cola.dto.SingleResponse;
 import com.xxc.demo.user.api.UserServiceI;
 import com.xxc.demo.user.dto.*;
 import com.xxc.demo.user.executor.UserAddExe;
@@ -21,18 +23,18 @@ public class UserServiceImpl implements UserServiceI {
     private final UserDetailQryExe userDetailQryExe;
 
     @Override
-    public void add(UserAddCmd cmd) {
-        userAddExe.execute(cmd);
+    public Response add(UserAddCmd cmd) {
+        return userAddExe.execute(cmd);
     }
 
     @Override
-    public void edit(Long id, UserEditCmd cmd) {
-        userEditExe.execute(id, cmd);
+    public Response edit(Long id, UserEditCmd cmd) {
+        return userEditExe.execute(id, cmd);
     }
 
     @Override
-    public void delete(Long id) {
-        userDeleteExe.execute(id);
+    public Response delete(Long id) {
+        return userDeleteExe.execute(id);
     }
 
     @Override
@@ -41,7 +43,7 @@ public class UserServiceImpl implements UserServiceI {
     }
 
     @Override
-    public UserDetailCO getDetail(Long id) {
+    public SingleResponse<UserDetailCO> getDetail(Long id) {
         return userDetailQryExe.execute(id);
     }
 }
