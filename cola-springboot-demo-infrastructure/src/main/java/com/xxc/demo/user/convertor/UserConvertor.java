@@ -1,6 +1,7 @@
 package com.xxc.demo.user.convertor;
 
 import com.xxc.demo.domain.user.model.User;
+import com.xxc.demo.user.dto.UserDetailCO;
 import com.xxc.demo.user.dto.UserPageCO;
 import com.xxc.demo.user.mapper.dataobject.UserDO;
 import org.mapstruct.Mapper;
@@ -17,4 +18,6 @@ public interface UserConvertor {
     UserPageCO toPageCO(UserDO dataObject);
 
     List<UserPageCO> toPageList(List<UserDO> dataObjects);
+
+    UserDetailCO toDetailCO(UserDO dataObject);
 }

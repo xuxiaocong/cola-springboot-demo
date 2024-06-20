@@ -14,4 +14,9 @@ public class UserDetailCO {
 
     @Schema(title = "性别")
     private Sex sex;
+
+    @Schema(title = "性别描述")
+    public String getSexDescription() {
+        return sex.getDescription();
+    }
 }

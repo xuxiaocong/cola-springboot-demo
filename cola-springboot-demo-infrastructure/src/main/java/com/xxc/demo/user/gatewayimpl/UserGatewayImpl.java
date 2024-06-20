@@ -3,6 +3,7 @@ package com.xxc.demo.user.gatewayimpl;
 import com.xxc.demo.domain.user.gateway.UserGateway;
 import com.xxc.demo.domain.user.model.User;
 import com.xxc.demo.user.convertor.UserConvertor;
+import com.xxc.demo.user.dto.UserDetailCO;
 import com.xxc.demo.user.mapper.UserMapper;
 import com.xxc.demo.user.mapper.dataobject.UserDO;
 import lombok.RequiredArgsConstructor;
@@ -35,5 +36,11 @@ public class UserGatewayImpl implements UserGateway {
     @Override
     public void delete(Long id) {
         mapper.deleteById(id);
+    }
+
+    @Override
+    public UserDetailCO getDetail(Long id) {
+        UserDO dataObject = mapper.selectById(id);
+        return convertor.toDetailCO(dataObject);
     }
 }

@@ -1,10 +1,7 @@
 package com.xxc.demo.user.api;
 
 import com.alibaba.cola.dto.PageResponse;
-import com.xxc.demo.user.dto.UserAddCmd;
-import com.xxc.demo.user.dto.UserEditCmd;
-import com.xxc.demo.user.dto.UserPageCO;
-import com.xxc.demo.user.dto.UserPageQry;
+import com.xxc.demo.user.dto.*;
 
 public interface UserServiceI {
     void add(UserAddCmd cmd);
@@ -14,4 +11,6 @@ public interface UserServiceI {
     void delete(Long id);
 
     PageResponse<UserPageCO> page(UserPageQry qry);
+
+    UserDetailCO getDetail(Long id);
 }

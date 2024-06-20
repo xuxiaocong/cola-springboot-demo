@@ -2,13 +2,11 @@ package com.xxc.demo.user;
 
 import com.alibaba.cola.dto.PageResponse;
 import com.xxc.demo.user.api.UserServiceI;
-import com.xxc.demo.user.dto.UserAddCmd;
-import com.xxc.demo.user.dto.UserEditCmd;
-import com.xxc.demo.user.dto.UserPageCO;
-import com.xxc.demo.user.dto.UserPageQry;
+import com.xxc.demo.user.dto.*;
 import com.xxc.demo.user.executor.UserAddExe;
 import com.xxc.demo.user.executor.UserDeleteExe;
 import com.xxc.demo.user.executor.UserEditExe;
+import com.xxc.demo.user.executor.query.UserDetailQryExe;
 import com.xxc.demo.user.executor.query.UserPageQryExe;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,6 +18,7 @@ public class UserServiceImpl implements UserServiceI {
     private final UserEditExe userEditExe;
     private final UserDeleteExe userDeleteExe;
     private final UserPageQryExe userPageQryExe;
+    private final UserDetailQryExe userDetailQryExe;
 
     @Override
     public void add(UserAddCmd cmd) {
@@ -39,5 +38,10 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public PageResponse<UserPageCO> page(UserPageQry qry) {
         return userPageQryExe.execute(qry);
+    }
+
+    @Override
+    public UserDetailCO getDetail(Long id) {
+        return userDetailQryExe.execute(id);
     }
 }

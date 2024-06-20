@@ -2,11 +2,9 @@ package com.xxc.demo.web;
 
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
+import com.alibaba.cola.dto.SingleResponse;
 import com.xxc.demo.user.api.UserServiceI;
-import com.xxc.demo.user.dto.UserAddCmd;
-import com.xxc.demo.user.dto.UserEditCmd;
-import com.xxc.demo.user.dto.UserPageCO;
-import com.xxc.demo.user.dto.UserPageQry;
+import com.xxc.demo.user.dto.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -47,5 +45,11 @@ public class UserController {
     @GetMapping("")
     public PageResponse<UserPageCO> getPage(@Validated @ParameterObject UserPageQry qry) {
         return userService.page(qry);
+    }
+
+    @Operation(summary = "获取详情")
+    @GetMapping("/{id}")
+    public SingleResponse<UserDetailCO> getDetail(@PathVariable("id") Long id) {
+        return SingleResponse.of(userService.getDetail(id));
     }
 }
